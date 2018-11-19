@@ -1,0 +1,11 @@
+nav.top-nav {
+  display: flex;
+  padding: 5px;
+}
+
+nav.top-nav h3,
+nav.top-nav .nav-links {
+  width: 50%;
+}
+.nav-links { text-align: right }
+.nav-links a { margin: 0 10px}

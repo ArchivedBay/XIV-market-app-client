@@ -4,6 +4,8 @@ import xivAPI from '../../api/xiv-api';
 import SearchForm from '../../components/SearchForm/SearchForm';
 import SearchResult from '../../components/SearchResult/SearchResult';
 
+import './ItemSearchPage.css';
+
 class ItemSearchPage extends Component {
   constructor(props) {
     super(props);
@@ -33,10 +35,13 @@ class ItemSearchPage extends Component {
   render() {
     return (
       <div id="search-page">
-        <h1> Search for an item </h1>
-        <SearchForm form-type='itemSearch' handler={this.handleItemSearch} />
+        <div className="top">
+          <label htmlFor="itemSearch">Search for an item</label>
+          <SearchForm form-type='itemSearch' handler={this.handleItemSearch} id='itemSearch'/>
+        </div>
+     
 
-        <div className="searchResults">
+        <div className="search-results">
           {this.renderSearchResults()}
         </div>
       </div>

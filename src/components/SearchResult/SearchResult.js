@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './SearchResult.css'
 
 const SearchResult = (props) => {
   return (
     <div className="search-result">
       <img src="x" alt=""/>
-      <h3> {props.result.Name} </h3>
+      <Link to={`/search/${props.result.ID}`} > {props.result.Name} </Link>
     </div>
   );
 }

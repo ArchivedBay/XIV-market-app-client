@@ -1,0 +1,12 @@
+#search-page {
+  padding: 10px;
+  min-height: 70vh;
+}
+#search-page .top {
+  display: flex;
+  align-items: center;
+}
+#search-page .top label { margin-right: 10px }
+#search-page .search-results { 
+  padding-top: 10px;
+}

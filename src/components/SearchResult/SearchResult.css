@@ -1,0 +1,12 @@
+.search-result {
+  border: 1px solid #65ad89;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+.search-result a {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+.search-result a:hover { color: #65ad89 }

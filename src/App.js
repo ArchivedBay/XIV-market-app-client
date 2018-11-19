@@ -3,6 +3,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 import NewsPage from './pages/NewsPage/NewsPage';
 import ItemSearchPage from './pages/ItemSearchPage/ItemSearchPage';
+import ItemResultPage from './pages/ItemResultPage/ItemResultPage';
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
 
@@ -27,6 +28,7 @@ class App extends Component {
 
           <Route exact path='/news' component={ NewsPage } />
           <Route exact path='/search' component={ ItemSearchPage } />
+          <Route exact path='/search/:itemID' component={ ItemResultPage } />
 
           <Footer />
         </div>

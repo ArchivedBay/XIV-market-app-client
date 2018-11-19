@@ -24,7 +24,6 @@ class NewsPage extends Component {
         return <NewsBlock key={index+1} article={article} /> 
       });
     }
-
   }
 
 
