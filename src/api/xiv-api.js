@@ -6,9 +6,8 @@ const fetchLatestNews = () => {
 
 const itemSearch = (itemString) => {
   return fetch(`https://xivapi.com/search?indexes=item&string=${itemString}`)
-    .then( xivData => xivData.json().Results ) // send back only the results array.
+    .then( xivData => xivData.json() )
     .catch( error => console.log(error) )
-
 }
 
 // process.env.REACT_APP_FFXIV_API_KEY

@@ -1,0 +1,10 @@
+form.item-search-form input{
+  background-color: #efefef;
+}
+
+.item-search-bar,
+.item-search-submit {
+  padding: 5px;
+  font-size: 17px;
+}
+

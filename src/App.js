@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom';
 
-import NewsPage from './pages/NewsPage/NewsPage'
-import ItemSearchPage from './pages/ItemSearchPage/ItemSearchPage'
+import NewsPage from './pages/NewsPage/NewsPage';
+import ItemSearchPage from './pages/ItemSearchPage/ItemSearchPage';
+import NavBar from './components/NavBar/NavBar';
+import Footer from './components/Footer/Footer';
+
 
 import './App.css';
 
@@ -20,8 +23,12 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
+          <NavBar auth={this.state.auth} />
+
           <Route exact path='/news' component={ NewsPage } />
           <Route exact path='/search' component={ ItemSearchPage } />
+
+          <Footer />
         </div>
       </BrowserRouter>
      

@@ -6,7 +6,21 @@ html, body {
   position: relative;
 }
 
-html, body, h1,h2,h3,h4,h5,h6,ul,li {
+html, body, h1,h2,h3,h4,h5,h6,ul,li,p {
   margin: 0;
   padding: 0;
 }
+
+a { text-decoration: none }
+
+input, button {
+  border: none;
+  outline: none;
+}
+.App {
+  min-height: 100%;
+}
+
+.primary-color { color: #65ad89 }
+.primary-bg { background-color: #65ad89 }
+.white-text { color: #fff }
