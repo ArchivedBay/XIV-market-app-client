@@ -1,51 +1,60 @@
 import React, { Component } from 'react';
 import xivAPI from '../../api/xiv-api';
-import { Link } from 'react-router-dom';
+import MarketSale from '../../components/MarketSale/MarketSale';
 import './ItemResultPage.css';
 
 class ItemResultPage extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      marketData: {
-        ID: this.props.match.params.itemID,
-        itemName: '',
-        currentPrices: [],
-        priceHistory: []
-      }
-    };
+
+    this.state = { 
+      currentPrices: [],
+      priceHistory: [],
+      isLoaded: false
+    }
+
   }
 
-  componentDidMount(){
-    xivAPI.fetchCurrentPrices('Adamantoise', this.state.marketData.ID)
-    .then(currentPricesJson => this.setState({
-      marketData: {
-        itemName: currentPricesJson.Item.Name,
-        currentPrices: currentPricesJson.Prices
-      }
-    }))
-    .catch(error => console.log(error));
-
-    xivAPI.fetchPriceHistory('Adamantoise', this.state.marketData.ID)
-      .then(priceHistoryJSON => this.setState({
-        marketData: {
-          priceHistory: priceHistoryJSON
-        }
-      }))
-      .catch(error => console.log(error));
+  componentDidMount() {
+    // updates state, causes 2 re-renders, 1 for each api call
+    xivAPI.fetchPriceHistory('Adamantoise', this.props.match.params.itemID)
+      .then( priceHistoryJSON => this.setState({ priceHistory: priceHistoryJSON }))
+      .then(_priceHistoryJSON => xivAPI.fetchCurrentPrices('Adamantoise', this.props.match.params.itemID) )
+      .then( currentPricesJSON => this.setState({ currentPrices: currentPricesJSON.Prices  }))
+      .catch( error => console.log(error) );
+      
   }
 
+  renderSales = () => {
+    let history = this.state.priceHistory
 
+    // if there is data in state from the API
+    if(history.History){
+      //return a block for each sale
+      return history.History.map( (sale, index) => {
+        return (
+          <MarketSale key={index+1} sale={sale} />
+        );
+      });
+
+      
+    }
+  }
+
+  // 
 
   render() {
-    console.log(this.state)
     return (
       <div className="item-result-page">
-        <p> Showing market data for: <span className='render-status primary-color'> {this.state.marketData.itemName ? this.state.marketData.itemName : '...Loading'} </span></p>
+        <p> 
+          Showing market data for: 
+          <span className='render-status primary-color'> {this.state.priceHistory.Item ? this.state.priceHistory.Item.Name : '...Loading'} </span>
+          on: 
+          <span className='primary-color'> Adamantoise</span>
+        </p>
 
         <div className="market-data-container">
-
-
+          {this.renderSales()}
         </div>
       </div>
     );
@@ -53,4 +62,3 @@ class ItemResultPage extends Component {
 }
 
 export default ItemResultPage;
-/* YOU LEFT OFF ON THIS PAGE, TRY TO FIGURE OUT A TEMPORARY DATA VIZ SOLUTION */
