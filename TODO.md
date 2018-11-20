@@ -7,3 +7,7 @@
     - the api will then output this in a format easy for the react chart to parse.
 
     - note this introduces a secondary delay in information so not only is there a delay from the FFXIV API itself, but you get a delay from the call made to the rails endpoint, so having up-to-date and accurate results is pretty much impossible for items that sell incredibly fast.
+
+  - Add a feature on the front end to allow the user to select their server instead of having to hard code it like it is now.
+    - Could also add a seperate metrics page to show the sale history of an item on each server.
+    
