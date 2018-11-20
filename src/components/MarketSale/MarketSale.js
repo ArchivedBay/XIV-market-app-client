@@ -5,10 +5,10 @@ import './MarketSale.css';
 const renderTime = (unixTimeStamp) => {
   let test = Moment.unix(unixTimeStamp).format("dddd, MMMM Do YYYY, h:mm:ss a")
 
-  let date = new Date(unixTimeStamp * 1000),
+  /* let date = new Date(unixTimeStamp * 1000),
       hours = date.getHours(),
       minutes = `0${date.getMinutes()}`,
-      seconds = `0${date.getSeconds()}`;
+      seconds = `0${date.getSeconds()}`; */
 
   return test;
 }

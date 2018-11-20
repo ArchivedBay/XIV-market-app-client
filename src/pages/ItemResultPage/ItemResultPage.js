@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import xivAPI from '../../api/xiv-api';
 import MarketSale from '../../components/MarketSale/MarketSale';
+import PieChart from '../../components/PieChart/PieChart';
 import './ItemResultPage.css';
 
 class ItemResultPage extends Component {
@@ -36,12 +37,15 @@ class ItemResultPage extends Component {
           <MarketSale key={index+1} sale={sale} />
         );
       });
-
-      
     }
   }
 
-  // 
+  renderPieChart = () => {
+    let history = this.state.priceHistory;
+
+    if(history.History) return <PieChart historyData={history.History} />
+  }
+
 
   render() {
     return (
@@ -50,11 +54,21 @@ class ItemResultPage extends Component {
           Showing market data for: 
           <span className='render-status primary-color'> {this.state.priceHistory.Item ? this.state.priceHistory.Item.Name : '...Loading'} </span>
           on: 
-          <span className='primary-color'> Adamantoise</span>
+          <span className='primary-color'> Adamantoise </span>
         </p>
 
         <div className="market-data-container">
-          {this.renderSales()}
+          <div className="market-sale-history">
+            {this.renderSales()}
+          </div>
+
+          <div className="market-sale-graphs">
+
+            <div className="pie-chart">
+              {this.renderPieChart()}
+            </div>
+
+          </div>
         </div>
       </div>
     );

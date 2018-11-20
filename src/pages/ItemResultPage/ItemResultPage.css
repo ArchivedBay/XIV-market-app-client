@@ -1,3 +1,22 @@
 .item-result-page{
   padding: 10px;
+  max-width: 100vw;
+  overflow: hidden;
+}
+
+.market-data-container {
+  width: 100%;
+  display: flex;
+}
+
+.market-sale-history {
+  max-height: 100vh;
+  overflow: scroll;
+  min-width: 500px;
+  padding-right: 5px;
+}
+
+.market-sale-graphs {
+  width: 1000px;
+  margin-left: 5px;
 }
