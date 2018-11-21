@@ -20,7 +20,7 @@ const MarketSale = (props) => {
         <h3>Purchase Date: </h3> <p> {renderTime(props.sale.PurchaseDate)} </p>
       </div>
       <div className="row">
-        <h3>Quantity: </h3> <p> {props.sale.PriceTotal / props.sale.PricePerUnit} </p>
+        <h3>Quantity: </h3> <p> {props.sale.Quantity} </p>
       </div>
       <div className="row">
         <h3>Individual Price: </h3> <p> {props.sale.PricePerUnit}/ea </p>

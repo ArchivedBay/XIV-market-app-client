@@ -2,7 +2,6 @@ form.item-search-form {
   display: flex;
 }
 form.item-search-form input{
-  border: 1px solid #65ad89;
   background-color: transparent;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -10,6 +9,13 @@ form.item-search-form input{
 form.item-search-form input::placeholder {
   color: #a8cebb;
 }
+
+form.item-search-form input,
+form.item-search-form .item-search-submit,
+form.item-search-form select{
+  border: 1px solid #65ad89;
+}
+
 
 .item-search-bar,
 .item-search-submit {
@@ -19,7 +25,6 @@ form.item-search-form input::placeholder {
   transition-property: background-color, color;
 }
 .item-search-submit {
-  border: 1px solid #65ad89;
   cursor: pointer;
   background: transparent;
   border-top-right-radius: 5px;

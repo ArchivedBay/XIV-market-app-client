@@ -6,7 +6,7 @@ const SearchResult = (props) => {
   return (
     <div className="search-result">
       <img src="x" alt=""/>
-      <Link to={`/search/${props.result.ID}`} > {props.result.Name} </Link>
+      <Link to={`/search/${props.serverName}/${props.result.ID}`} > {props.result.Name} </Link>
     </div>
   );
 }

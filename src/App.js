@@ -28,7 +28,7 @@ class App extends Component {
 
           <Route exact path='/news' component={ NewsPage } />
           <Route exact path='/search' component={ ItemSearchPage } />
-          <Route exact path='/search/:itemID' component={ ItemResultPage } />
+          <Route exact path='/search/:serverName/:itemID' component={ ItemResultPage } />
 
           <Footer />
         </div>

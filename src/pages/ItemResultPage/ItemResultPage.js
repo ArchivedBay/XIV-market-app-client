@@ -18,9 +18,9 @@ class ItemResultPage extends Component {
 
   componentDidMount() {
     // updates state, causes 2 re-renders, 1 for each api call
-    xivAPI.fetchPriceHistory('Adamantoise', this.props.match.params.itemID)
+    xivAPI.fetchPriceHistory(this.props.match.params.serverName, this.props.match.params.itemID)
       .then( priceHistoryJSON => this.setState({ priceHistory: priceHistoryJSON }))
-      .then(_priceHistoryJSON => xivAPI.fetchCurrentPrices('Adamantoise', this.props.match.params.itemID) )
+      .then(_priceHistoryJSON => xivAPI.fetchCurrentPrices(this.props.match.params.serverName, this.props.match.params.itemID) )
       .then( currentPricesJSON => this.setState({ currentPrices: currentPricesJSON.Prices  }))
       .catch( error => console.log(error) );
       
@@ -46,7 +46,8 @@ class ItemResultPage extends Component {
     if(history.History) return <PieChart historyData={history.History} />
   }
 
-
+  // NOTE: Instead of calling the XIV API here eventually I'm going
+  // to move this to use my own backend instead.
   render() {
     return (
       <div className="item-result-page">
@@ -54,7 +55,7 @@ class ItemResultPage extends Component {
           Showing market data for: 
           <span className='render-status primary-color'> {this.state.priceHistory.Item ? this.state.priceHistory.Item.Name : '...Loading'} </span>
           on: 
-          <span className='primary-color'> Adamantoise </span>
+          <span className='primary-color'> {this.props.match.params.serverName} </span>
         </p>
 
         <div className="market-data-container">
