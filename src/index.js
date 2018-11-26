@@ -1,3 +1,4 @@
+import 'dotenv/config'; //to use .env file.
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';

@@ -11,13 +11,13 @@ const itemSearch = (itemString) => {
 }
 
 const fetchCurrentPrices = (server, itemID) => {
-  return fetch(`https://xivapi.com/market/${server}/items/${itemID}`)
+  return fetch(`https://xivapi.com/market/${server}/items/${itemID}?key=${process.env.REACT_APP_FFXIV_API_KEY}`)
     .then( xivData => xivData.json() )
     .catch( error => console.log(error) )
 }
 
 const fetchPriceHistory = (server, itemID) => {
-  return fetch(`https://xivapi.com/market/${server}/items/${itemID}/history`)
+  return fetch(`https://xivapi.com/market/${server}/items/${itemID}/history?key=${process.env.REACT_APP_FFXIV_API_KEY}`)
     .then( xivData => xivData.json() )
     .catch( error => console.log(error) )
 }
