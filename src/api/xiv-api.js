@@ -22,9 +22,6 @@ const fetchPriceHistory = (server, itemID) => {
     .catch( error => console.log(error) )
 }
 
-// process.env.REACT_APP_FFXIV_API_KEY
-// this.props.match.params.itemID - 9027
-
 export default {
   fetchLatestNews: fetchLatestNews, // grab the latest news from the lodestone
   itemSearch: itemSearch,           // search the db for an item & get back a list of results.
