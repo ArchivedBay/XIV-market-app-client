@@ -5,10 +5,11 @@ import './NavBar.css';
 const NavBar = (props) => {
   return (
     <nav className='top-nav primary-bg white-text'>
-      <h3>XIV-Market-Info</h3>
+      <div className="logo">
+        <Link to='/'> XIV-Market-Info </Link>
+      </div>
 
-      <div className="nav-links">
-        <Link to='/news' className='white-text'> Lodestone News </Link>    
+      <div className="nav-links">  
         <Link to='/search' className='white-text'> Item Search </Link>    
       </div>
     </nav>

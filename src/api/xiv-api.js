@@ -23,10 +23,10 @@ const fetchPriceHistory = (server, itemID) => {
 }
 
 export default {
-  fetchLatestNews: fetchLatestNews, // grab the latest news from the lodestone
-  itemSearch: itemSearch,           // search the db for an item & get back a list of results.
-  fetchCurrentPrices: fetchCurrentPrices,
-  fetchPriceHistory: fetchPriceHistory
+  fetchLatestNews,      // grab the latest news from the lodestone
+  itemSearch,           // search the db for an item & get back a list of results.
+  fetchCurrentPrices,
+  fetchPriceHistory
 }
 
 

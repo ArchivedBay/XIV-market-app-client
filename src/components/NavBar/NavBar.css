@@ -3,9 +3,13 @@ nav.top-nav {
   padding: 5px;
 }
 
-nav.top-nav h3,
+nav.top-nav .logo,
 nav.top-nav .nav-links {
   width: 50%;
 }
-.nav-links { text-align: right }
-.nav-links a { margin: 0 10px}
+.logo a, .logo a:visited  { color: #2b691a }
+.logo a:hover  { color: #ffffff }
+.logo          { font-weight: bold }
+
+.nav-links    { text-align: right }
+.nav-links a  { margin: 0 10px}

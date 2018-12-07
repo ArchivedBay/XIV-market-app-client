@@ -17,10 +17,7 @@ input, button {
   border: none;
   outline: none;
 }
-.App {
-  min-height: 100%;
-  padding-bottom: 100px;
-}
+.App { min-height: 100% }
 
 .primary-color { color: #65ad89 }
 .primary-bg { background-color: #65ad89 }
