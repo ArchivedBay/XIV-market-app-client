@@ -5,7 +5,6 @@ import ItemSearchPage from './pages/ItemSearchPage/ItemSearchPage';
 import ItemResultPage from './pages/ItemResultPage/ItemResultPage';
 import NavBar from './components/NavBar/NavBar';
 import LandingPage from './pages/LandingPage/LandingPage';
-import APINotice from './components/APINotice/APINotice';
 import Footer from './components/Footer/Footer';
 
 
