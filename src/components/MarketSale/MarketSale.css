@@ -9,3 +9,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 460px){
+  .market-sale {
+    margin: 10px 0;
+    width: 100%;
+  }
+
+}
