@@ -18,13 +18,9 @@
   padding: 2rem;
   width: 100%;
 }
-.info-section p {
-  line-height: 1.5rem;
-}
 
-.info-section li {
-  margin: 10px;
-}
+.info-section p   { line-height: 1.5rem }
+.info-section li  { margin: 10px }
 
 
 

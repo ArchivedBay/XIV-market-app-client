@@ -6,7 +6,10 @@
   display: flex;
   align-items: center;
 }
-#search-page .top label { margin-right: 10px }
-#search-page .search-results { 
-  padding-top: 10px;
+
+#search-page .top label       { margin-right: 10px }
+#search-page .search-results  { padding-top: 10px }
+
+@media screen and (max-width: 460px){
+  #search-page .top { flex-direction: column }
 }

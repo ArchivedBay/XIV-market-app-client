@@ -64,12 +64,11 @@ class ItemResultPage extends Component {
           </div>
 
           <div className="market-sale-graphs">
-
             <div className="pie-chart">
               {this.renderPieChart()}
             </div>
-
           </div>
+          
         </div>
       </div>
     );

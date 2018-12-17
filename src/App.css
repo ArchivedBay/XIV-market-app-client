@@ -19,6 +19,6 @@ input, button {
 }
 .App { min-height: 100% }
 
-.primary-color { color: #65ad89 }
-.primary-bg { background-color: #65ad89 }
-.white-text { color: #fff }
+.primary-color  { color: #65ad89 }
+.primary-bg     { background-color: #65ad89 }
+.white-text     { color: #fff }

@@ -34,3 +34,14 @@ form.item-search-form select{
   background-color: #65ad89;
   color: #fff;
 }
+
+@media screen and (max-width: 460px){
+  form.item-search-form { flex-direction: column }
+
+  form.item-search-form,
+  form.item-search-form input { width: 100% }
+
+  form.item-search-form input,
+  form.item-search-form button { border-radius: 0 }
+
+}
