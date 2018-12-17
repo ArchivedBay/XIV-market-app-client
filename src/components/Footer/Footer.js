@@ -20,10 +20,6 @@ class Footer extends Component {
         </p>
         <p className='copyright-stuff'>
           This app utilizes data retrieved from the <a href='https://xivapi.com/'>XIV API </a>
-          Further copyright and usage information can be seen <Link to='/copyright'>here.</Link>
-        </p>
-        <p className="copyright-stuff">
-          This app was made by Skyelah :) 
         </p>
       </footer>
     );

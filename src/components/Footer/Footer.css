@@ -22,3 +22,9 @@ footer.sticky {
   justify-content: center;
 }
 
+footer a,
+footer a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+

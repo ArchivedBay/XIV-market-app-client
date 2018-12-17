@@ -7,7 +7,6 @@ import NavBar from './components/NavBar/NavBar';
 import LandingPage from './pages/LandingPage/LandingPage';
 import Footer from './components/Footer/Footer';
 
-
 import './App.css';
 
 class App extends Component {
@@ -15,7 +14,7 @@ class App extends Component {
     super(props);
     this.state = {
       needsStickyFooter: true
-    } //we'll set auth state here later because we want it ASAP.
+    } 
   }
 
   toggleFooter = () => {
@@ -23,21 +22,19 @@ class App extends Component {
   }
 
 
-  
   render() {
-
     return (
       <BrowserRouter>
         <div className="App">
           <NavBar auth={this.state.auth} />
+
           <Route exact path='/' component={ LandingPage } />
           <Route exact path='/search' component={ ItemSearchPage } />
           <Route exact path='/search/:serverName/:itemID' component={ ItemResultPage } />
 
           <Footer toggleFooter={this.toggleFooter} needsStickyFooter={this.state.needsStickyFooter}/>
         </div>
-      </BrowserRouter>
-     
+      </BrowserRouter>    
     );
   }
 }
